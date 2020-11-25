@@ -11,3 +11,12 @@ axios
         cars : result.data
     })
 })
+
+// axios
+// .get('http://api-tutor.herokuapp.com/v1/cars/color')
+// .then(function(makes){
+//     colorList.innerHTML = colorTem({
+//         colors : makes.data
+    
+// })
+// })
