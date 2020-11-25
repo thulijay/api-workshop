@@ -6,9 +6,80 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Filter widget</title>
 	<link rel="stylesheet" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js" integrity="sha256-S1J4GVHHDMiirir9qsXWc8ZWw74PHHafpsHp5PXtjTs=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.js" integrity="sha256-hSzapznWRy/aOZkctlN03an9DxCLlN8ZCQS0lxntiHg=" crossorigin="anonymous"></script>
+	
+	
+	<script type="text/x-script" class="carsFilter">
+		<table>
+			<tr>
+				<th>Brand</th>
+				<th>Make</th>
+				<th>Colour</th>
+				<th>Serial Nr</th>
+				<th>Registration Nr</th>
+			</tr>
+			{{#each cars}}
+				<tr>
+				<td>{{this.make}}</td>
+					<td>{{this.model}}</td>
+					<td>{{this.color}}</td>
+					<td>{{this.price}}</td>
+					<td>{{this.reg_number}}</td>
+				</tr>
+			{{/each}}
+	</table>
+	</script>
+
+	<script type="text/x-script" class="colourFilter">
+		<option value="">Select Colour</option>
+
+		{{#each colors}}
+	
+		<option>{{this}}</option>		
+	
+		{{/each}}
+		</script>
+
+		<script type="text/x-script" class="brandFilter">
+
+			<option value="">Select Brand</option>
+
+			{{#each brands}}
+			
+		<option>{{this}}</option>	
+			
+			{{/each}}
+			</script>
+
 
 </head>
 <body>
+
+
+
+	
 	<h1>Filter widget</h1>
+<div class="colors">
+
+	<select name="" class="selectBrands" id=""></select>
+
+	</div>
+
+	<br>
+
+	<div class="carFilter">
+		
+		<select name="" class="selectColours" id=""></select>
+
+	</div>
+
+	<div class="dropDown">
+
+
+	</div>
+<br>
+	<button type="submit" class="filterBtn">Filter</button>
 </body>
+<script src="filter.js"></script>
 </html>

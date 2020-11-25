@@ -10,11 +10,24 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.js" integrity="sha256-hSzapznWRy/aOZkctlN03an9DxCLlN8ZCQS0lxntiHg=" crossorigin="anonymous"></script>
 
 	<script type="text/x-script" class="carsTemplate">
-		{{#each cars}}
-	
-	<li>{{this}}</li>
-	
-	{{/each}}
+		<table>
+			<tr>
+				<th>Brand</th>
+				<th>Make</th>
+				<th>Colour</th>
+				<th>Serial Nr</th>
+				<th>Registration Nr</th>
+			</tr>
+			{{#each cars}}
+				<tr>
+				<td>{{this.make}}</td>
+					<td>{{this.model}}</td>
+					<td>{{this.color}}</td>
+					<td>{{this.price}}</td>
+					<td>{{this.reg_number}}</td>
+				</tr>
+			{{/each}}
+	</table>
 	</script>
 
 	<script type="text/x-script" class="colorTem">
@@ -23,6 +36,15 @@
 	<li>{{this}}</li>
 
 	{{/each}}
+	</script>
+
+	<script type="text/x-script" class="makeTem">
+	{{#each brands}}
+
+	<li>{{this}}</li>
+
+	{{/each}}
+	
 	</script>
 
 
@@ -43,6 +65,14 @@
 
 	</div>
 
+	<h2>Brands</h2>
+	<div class="brands">
+		<ul class="makesList">
+
+		</ul>
+
+	</div> 
+
 	<h2>Cars</h2>
 	<div class="cars">
 <ul class="carList">
@@ -50,17 +80,9 @@
 </ul>
 	</div>
 
-	<!-- <h2>Brands</h2>
-	<div class="brands">
-
-	</div> --> 
-
-
-
-
 </body>
 <script src="cars.js"></script>
-<script src="colors.js"> </script>
+<script src="filter.js"></script>
 
 </html>
 
